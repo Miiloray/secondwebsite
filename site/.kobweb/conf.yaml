@@ -1,0 +1,14 @@
+site:
+  title: "personalpage"
+
+server:
+  files:
+    dev:
+      contentRoot: "build/processedResources/js/main/public"
+      script: "build/kotlin-webpack/js/developmentExecutable/milo.js"
+      api: "build/libs/milo.jar"
+    prod:
+      script: "build/kotlin-webpack/js/productionExecutable/milo.js"
+      siteRoot: ".kobweb/site"
+
+  port: 8080
