@@ -1,6 +1,7 @@
 package com.personalpage.milo.pages
 
 import androidx.compose.runtime.*
+import com.personalpage.milo.components.Contact
 import com.personalpage.milo.components.DarkMode
 import com.personalpage.milo.components.ProfilecardAbout
 import com.personalpage.milo.util.Res
@@ -12,6 +13,7 @@ import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.backgroundImage
 import com.varabyte.kobweb.compose.ui.modifiers.fillMaxSize
 import com.varabyte.kobweb.core.Page
+import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import com.varabyte.kobweb.silk.theme.colors.ColorMode
 import kotlinx.browser.localStorage
 
@@ -20,6 +22,8 @@ import kotlinx.browser.localStorage
 fun Aboutpage() {
 
     var colormodeabout by ColorMode.currentState
+    var colormodecontact by ColorMode.currentState
+    var breakpointabout = rememberBreakpoint()
 
     LaunchedEffect(colormodeabout) {
         val savedTheme = localStorage.getItem(Res.Icons.SAVED_THEME) ?: ColorMode.LIGHT.name
@@ -50,6 +54,7 @@ fun Aboutpage() {
     ){
         //HeaderAbout(colorMode = colormodeabout)
         ProfilecardAbout(colorMode = colormodeabout)
+        //Contact(colorMode = colormodeabout, breakpoint = breakpointabout)
 
 
     }

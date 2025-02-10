@@ -5,6 +5,7 @@ import com.personalpage.milo.styles.Homepage
 import com.personalpage.milo.styles.SytelofIcons
 import com.personalpage.milo.util.Res
 import com.varabyte.kobweb.compose.css.Cursor
+import com.varabyte.kobweb.compose.css.ObjectFit
 import com.varabyte.kobweb.compose.css.TextAlign
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Box
@@ -26,6 +27,8 @@ import org.jetbrains.compose.web.css.CSSUnit
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
 
+import com.varabyte.kobweb.silk.components.graphics.Image
+
 
 @Composable
 fun HeaderAbout(colorMode: ColorMode){
@@ -36,15 +39,18 @@ fun HeaderAbout(colorMode: ColorMode){
         contentAlignment = if (breakpoint3 <= Breakpoint.SM) Alignment.TopCenter
         else Alignment.TopStart,
         modifier = Modifier
+
             .fillMaxWidth(Res.Dimens.CARDHEADWIDTH.px)
             .padding(all = 12.px)
             .borderRadius(r = Res.Dimens.BORDER_RADIUS.px)
+
             .background(if (colorMode.isLight) Colors.Navy
                 else Colors.Black),
 
           //  contentAlignment = Alignment.TopCenter //das ist nur für was inn der box stehthorizontalArrangement = if (breakpoint2 <= Breakpoint.SM)
         //                    Arrangement.Center else Arrangement.Start
     ){
+
             SpanText(
                 text = "Homepage",
                 modifier = Modifier

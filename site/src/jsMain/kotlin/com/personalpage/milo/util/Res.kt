@@ -32,6 +32,8 @@ object Res {
 
     object CONTENT {
         const val FOTO = "portrait.png"
+        const val CORAL = "coral.png"
+        const val CORALREEF = "coralreef.png"
         const val FUNFACT = "Shark fun facts:     "
         const val ABOUT =
                             "Blue sharks are really blue" +
@@ -39,7 +41,7 @@ object Res {
                 "and is normally snowy white beneath. The mako and porbeagle sharks" +
                 " also exhibit a blue coloration, but it is not nearly as brilliant" +
                 " as that of a blue shark. In life, most sharks are brown, olive, or grayish."
-        const val NEWTEXT = "Press 'Homepage'  "
+        const val NEWTEXT = "Press 'Homepage' to return to the Homepage  "
         const val NAME = "Tigershark"
         const val OCCUPATION = "shark"
         const val EMAIL = "email"
@@ -52,14 +54,16 @@ object Res {
 
     object Dimens{
         const val BORDER_RADIUS = 8
-        const val MAX_CARD_WIDTH = 1000
-        const val MAXCARDWIDTH2 = 1200//breite
+        const val MAX_CARD_WIDTH = 1000 //profiole card
+        const val MAXCARDWIDTH2 = 1200//breite //profilecard about
         const val MAX_CARD_HEIGHT = 600
         const val MAXCARDHEIGHT2 = 610 //hoehe
         const val ICON_SIZE = 24
         const val ICON_SIZE_LG = 32
-        const val CARDHEADHEIGHT = 100
-        const val CARDHEADWIDTH = 1175
+        const val CARDHEADHEIGHT = 100 //box in profilecard about
+        const val CARDHEADWIDTH = 1175 //box in profilecard about
+        const val CONTACTWIDTH = 1175   //contactpage
+        const val CONTACTHEIGHT = 425 //constact page
 
     }
 }
