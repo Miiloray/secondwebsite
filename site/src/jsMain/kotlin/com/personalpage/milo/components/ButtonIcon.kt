@@ -35,7 +35,8 @@ fun ButtonIcon(     //no idea lol
                 .border(
                     width = 1.px,
                     style = LineStyle.Solid,
-                    color = Res.Themecolor.TRUEBLUE.color //umrandung für die icons
+                    color = if (colorMode.isLight) Res.Themecolor.TRUEBLUE.color
+                            else Res.Themecolor.NONPHOTBLUE.color//umrandung für die icons
                 )
                 .onClick { onClick?.invoke() }
 

@@ -6,8 +6,10 @@ import org.jetbrains.compose.web.css.rgb
 object Res {
 
     enum class Themecolor(val color: CSSColorValue){
+        WHITE(color = rgb(255, 255, 255)),
+        BLACK(color = rgb(0, 0, 0)),
         TRUEBLUE(color = rgb(r = 48, g = 102, b = 190)),
-        RICHBLUE(color = rgb(r = 0, g = 16, b = 17)),
+        RICHBLACK(color = rgb(r = 0, g = 16, b = 17)),
         NONPHOTBLUE(color = rgb(r = 138, g = 225, b = 252)),
         MOONSTONEBLUE(color = rgb(r = 72, g = 184, b = 208)),
         DARKCYAN(color = rgb(r = 33, g = 137, b = 126))
@@ -39,6 +41,7 @@ object Res {
         const val PANCAKE = "Pancake"
         const val LAZYTYPE = "Lazytype"
         const val MY_EMAIL = "mailto:mailo@gmail.com"
+        const val ABOUTPAGE = "About"
 
     }
 

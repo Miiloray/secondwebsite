@@ -38,8 +38,10 @@ fun HomePage() {
             .backgroundImage(
                 linearGradient(
                     dir = LinearGradient.Direction.ToRight,
-                    from =  Res.Themecolor.TRUEBLUE.color,
-                    to =  Res.Themecolor.NONPHOTBLUE.color
+                    from =  if (colorModeHome.isLight) Res.Themecolor.TRUEBLUE.color
+                        else Res.Themecolor.RICHBLACK.color,
+                    to = if (colorModeHome.isLight) Res.Themecolor.NONPHOTBLUE.color
+                    else Res.Themecolor.DARKCYAN.color
                 )
             ),
         contentAlignment = Alignment.Center

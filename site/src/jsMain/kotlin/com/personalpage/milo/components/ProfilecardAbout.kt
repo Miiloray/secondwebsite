@@ -43,7 +43,8 @@ fun ProfilecardAbout(colorMode: ColorMode) {
             )
             .padding(all = 12.px)
             .borderRadius(r = Res.Dimens.BORDER_RADIUS.px)
-            .background( Colors.White)
+            .background( if (colorMode.isLight) Colors.White
+                        else Colors.Gray)
 
     ){
         Column(
@@ -60,7 +61,8 @@ fun ProfilecardAbout(colorMode: ColorMode) {
 
             ) {
                 Icons.entries.filter {
-                    it.name.contains("Light") // nimmt alle icons mit light im namen
+                    if (colorMode.isLight) !it.name.contains("Light")
+                    else it.name.contains("Light")// nimmt alle icons mit light im namen
                 }.forEach {
                     ButtonIcon(
                         modifier = SytelofIcons.toModifier(),

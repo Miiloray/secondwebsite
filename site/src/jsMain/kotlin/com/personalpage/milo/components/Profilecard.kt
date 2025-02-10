@@ -36,10 +36,11 @@ fun Profilecard(colorMode: ColorMode) {
             )
             .padding(all = 12.px)
             .borderRadius(r = Res.Dimens.BORDER_RADIUS.px)
-            .background( Colors.White)
+            .background( if (colorMode.isLight) Colors.White
+            else Colors.Gray)
     ){
-        LeftSide(breakpoint = breakpoint) //und hier callst du die Leftside methode aus der leftside klasse
-        RightSide(breakpoint = breakpoint)
+        LeftSide(colorMode = colorMode, breakpoint = breakpoint) //und hier callst du die Leftside methode aus der leftside klasse
+        RightSide(colorMode = colorMode, breakpoint = breakpoint)
 
     }
 }

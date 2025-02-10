@@ -11,10 +11,11 @@ import com.varabyte.kobweb.compose.ui.modifiers.objectFit
 import com.varabyte.kobweb.compose.ui.thenIf
 import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
+import com.varabyte.kobweb.silk.theme.colors.ColorMode
 import org.jetbrains.compose.web.css.px
 
 @Composable
-fun RightSide(breakpoint: Breakpoint){
+fun RightSide(colorMode: ColorMode, breakpoint: Breakpoint){
     Box(
         modifier = Modifier
             .fillMaxSize()

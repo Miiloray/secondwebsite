@@ -25,6 +25,7 @@ import org.jetbrains.compose.web.css.CSSUnit
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
 
+
 @Composable
 fun HeaderAbout(colorMode: ColorMode){
 
@@ -36,7 +37,8 @@ fun HeaderAbout(colorMode: ColorMode){
             .fillMaxWidth(Res.Dimens.CARDHEADWIDTH.px)
             .padding(all = 12.px)
             .borderRadius(r = Res.Dimens.BORDER_RADIUS.px)
-            .background( Colors.Navy),
+            .background(if (colorMode.isLight) Colors.Navy
+                else Colors.Black),
           //  contentAlignment = Alignment.TopCenter //das ist nur für was inn der box steht
 
 
@@ -45,7 +47,8 @@ fun HeaderAbout(colorMode: ColorMode){
                 text = "Homepage",
                 modifier = Modifier
                     .cursor(Cursor.Pointer)
-                    .color(Colors.White)
+                    .color(if (colorMode.isLight) Colors.White
+                        else Colors.White)
                     .onClick { window.location.href = "http://localhost:8080/" }
             )
         }
