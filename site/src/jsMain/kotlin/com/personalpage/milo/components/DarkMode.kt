@@ -36,7 +36,7 @@ fun DarkMode(
                 property("pointer-events", "none")
             },
         verticalArrangement = Arrangement.Top,
-        horizontalAlignment = Alignment.End
+        horizontalAlignment = Alignment.End     //rechts
     ){
         ButtonIcon(
             modifier = Darkmodestyle.toModifier()

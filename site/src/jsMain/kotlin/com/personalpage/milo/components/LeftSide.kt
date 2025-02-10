@@ -18,6 +18,7 @@ import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.style.toModifier
 import com.varabyte.kobweb.silk.theme.colors.ColorMode
 import kotlinx.browser.window
+import kotlinx.coroutines.CoroutineStart
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
 
@@ -67,6 +68,19 @@ fun LeftSide(
                     else Alignment.Start
                 )
         ){}
+        SpanText(
+            text = Res.CONTENT.FUNFACT,
+            modifier = Modifier
+                .margin(top = 12.px)
+                .fontFamily(Res.CONTENT.LAZYTYPE)
+                .fontSize(22.px)
+                .color(if(colorMode.isLight)Res.Themecolor.MOONSTONEBLUE.color
+                else Res.Themecolor.TRUEBLUE.color)
+                .textAlign(
+                    if (breakpoint <= Breakpoint.SM) TextAlign.Center
+                    else TextAlign.Start
+                )
+        )
         SpanText(
             text = Res.CONTENT.ABOUT,
             modifier = Modifier

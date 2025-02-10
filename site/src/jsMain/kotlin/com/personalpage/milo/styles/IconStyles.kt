@@ -27,7 +27,7 @@ val SytelofIcons = CssStyle {
     hover {
         Modifier
             .rotate(10.deg)
-            .background(if (colorMode.isLight) Res.Themecolor.TRUEBLUE.color
+            .background(if (colorMode.isLight) Res.Themecolor.MOONSTONEBLUE.color
             else Res.Themecolor.DARKCYAN.color)
     }
 }
@@ -46,7 +46,7 @@ val SytelofIcons = CssStyle {
         hover {
             Modifier
                 .background(
-                    if (colorMode.isLight) Colors.White
+                    if (colorMode.isLight) Colors.LightBlue
                     else Res.Themecolor.TRUEBLUE.color
                 )
         }

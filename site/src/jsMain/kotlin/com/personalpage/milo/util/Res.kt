@@ -32,11 +32,16 @@ object Res {
 
     object CONTENT {
         const val FOTO = "portrait.png"
-        const val ABOUT = "This is my second website" +
-                            "I am currently coding more and tried to" +
-                            "implement two pages instead of one"
-        const val NAME = "Milo"
-        const val OCCUPATION = "Student"
+        const val FUNFACT = "Shark fun facts:     "
+        const val ABOUT =
+                            "Blue sharks are really blue" +
+                            " It displays a brilliant blue color on the upper portion of its body " +
+                "and is normally snowy white beneath. The mako and porbeagle sharks" +
+                " also exhibit a blue coloration, but it is not nearly as brilliant" +
+                " as that of a blue shark. In life, most sharks are brown, olive, or grayish."
+        const val NEWTEXT = "Press 'Homepage'  "
+        const val NAME = "Tigershark"
+        const val OCCUPATION = "shark"
         const val EMAIL = "email"
         const val PANCAKE = "Pancake"
         const val LAZYTYPE = "Lazytype"
@@ -50,7 +55,7 @@ object Res {
         const val MAX_CARD_WIDTH = 1000
         const val MAXCARDWIDTH2 = 1200//breite
         const val MAX_CARD_HEIGHT = 600
-        const val MAXCARDHEIGHT2 = 560 //610 //hoehe
+        const val MAXCARDHEIGHT2 = 610 //hoehe
         const val ICON_SIZE = 24
         const val ICON_SIZE_LG = 32
         const val CARDHEADHEIGHT = 100
