@@ -1,6 +1,7 @@
 package com.personalpage.milo.components
 
 import androidx.compose.runtime.Composable
+import com.personalpage.milo.pages.Aboutpage
 import com.personalpage.milo.styles.Buttonfade
 import com.personalpage.milo.util.Res
 import com.varabyte.kobweb.compose.css.FontWeight
@@ -101,7 +102,7 @@ fun LeftSide(
             modifier = Buttonfade.toModifier()
                 .margin(top = 12.px),
             size = ButtonSize.LG,
-            onClick = { window.location.href = "/about"}
+            onClick = { Aboutpage()}
         ){
             Image(
                 modifier = Modifier
