@@ -16,6 +16,7 @@ import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.compose.ui.thenIf
+import com.varabyte.kobweb.core.rememberPageContext
 import com.varabyte.kobweb.silk.components.layout.SimpleGrid
 import com.varabyte.kobweb.silk.components.layout.numColumns
 import com.varabyte.kobweb.silk.components.text.SpanText
@@ -36,6 +37,7 @@ import com.varabyte.kobweb.silk.components.navigation.Link
 fun HeaderAbout(colorMode: ColorMode){
 
     var breakpoint3 = rememberBreakpoint()
+    val ctx2 = rememberPageContext()
 
     Box(
         contentAlignment = if (breakpoint3 <= Breakpoint.SM) Alignment.TopCenter
@@ -60,7 +62,7 @@ fun HeaderAbout(colorMode: ColorMode){
                     .cursor(Cursor.Pointer)
                     .color(if (colorMode.isLight) Colors.White
                         else Colors.White)
-                    .onClick {Link ("/index")}
+                    .onClick {ctx2.router.navigateTo("/")}
 
 
             )

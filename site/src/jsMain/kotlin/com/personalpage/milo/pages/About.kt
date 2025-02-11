@@ -1,7 +1,9 @@
 package com.personalpage.milo.pages
 
-import androidx.compose.runtime.*
-import com.personalpage.milo.components.Contact
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.setValue
 import com.personalpage.milo.components.DarkMode
 import com.personalpage.milo.components.ProfilecardAbout
 import com.personalpage.milo.util.Res

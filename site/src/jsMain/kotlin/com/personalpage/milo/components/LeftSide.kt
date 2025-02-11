@@ -10,6 +10,7 @@ import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.core.PageContext
+import com.varabyte.kobweb.core.rememberPageContext
 import com.varabyte.kobweb.silk.components.forms.Button
 import com.varabyte.kobweb.silk.components.forms.ButtonSize
 import com.varabyte.kobweb.silk.components.graphics.Image
@@ -25,10 +26,9 @@ import org.jetbrains.compose.web.css.px
 
 @Composable
 fun LeftSide(
-    context: PageContext,
-    content: @Composable () -> Unit,
     colorMode: ColorMode,
     breakpoint: Breakpoint){
+    val ctx = rememberPageContext()
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -103,7 +103,7 @@ fun LeftSide(
             modifier = Buttonfade.toModifier()
                 .margin(top = 12.px),
             size = ButtonSize.LG,
-            onClick = { Link ("/about")}
+            onClick = {ctx.router.navigateTo("/about")}
         ){
             Image(
                 modifier = Modifier
