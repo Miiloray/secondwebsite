@@ -1,7 +1,6 @@
 package com.personalpage.milo.components
 
 import androidx.compose.runtime.Composable
-import com.personalpage.milo.pages.Aboutpage
 import com.personalpage.milo.styles.Buttonfade
 import com.personalpage.milo.util.Res
 import com.varabyte.kobweb.compose.css.FontWeight
@@ -10,22 +9,24 @@ import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
+import com.varabyte.kobweb.core.PageContext
 import com.varabyte.kobweb.silk.components.forms.Button
 import com.varabyte.kobweb.silk.components.forms.ButtonSize
 import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.components.layout.Surface
+import com.varabyte.kobweb.silk.components.navigation.Link
 import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.style.toModifier
 import com.varabyte.kobweb.silk.theme.colors.ColorMode
-import kotlinx.browser.window
-import kotlinx.coroutines.CoroutineStart
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
 
 
 @Composable
 fun LeftSide(
+    context: PageContext,
+    content: @Composable () -> Unit,
     colorMode: ColorMode,
     breakpoint: Breakpoint){
     Column(
@@ -102,7 +103,7 @@ fun LeftSide(
             modifier = Buttonfade.toModifier()
                 .margin(top = 12.px),
             size = ButtonSize.LG,
-            onClick = { Aboutpage()}
+            onClick = { Link ("/about")}
         ){
             Image(
                 modifier = Modifier

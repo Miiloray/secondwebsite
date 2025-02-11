@@ -1,6 +1,7 @@
 package com.personalpage.milo.components
 
 import androidx.compose.runtime.Composable
+import com.personalpage.milo.pages.HomePage
 import com.personalpage.milo.styles.Homepage
 import com.personalpage.milo.styles.SytelofIcons
 import com.personalpage.milo.util.Res
@@ -28,6 +29,7 @@ import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
 
 import com.varabyte.kobweb.silk.components.graphics.Image
+import com.varabyte.kobweb.silk.components.navigation.Link
 
 
 @Composable
@@ -58,7 +60,7 @@ fun HeaderAbout(colorMode: ColorMode){
                     .cursor(Cursor.Pointer)
                     .color(if (colorMode.isLight) Colors.White
                         else Colors.White)
-                    .onClick { window.location.href = "http://localhost:8080/" }
+                    .onClick {Link ("/index")}
 
 
             )
