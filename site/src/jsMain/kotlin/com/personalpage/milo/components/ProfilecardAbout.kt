@@ -16,6 +16,7 @@ import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.style.toModifier
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import com.varabyte.kobweb.silk.theme.colors.ColorMode
+import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
 
 @Composable
@@ -42,8 +43,11 @@ fun ProfilecardAbout(colorMode: ColorMode) {
             .borderRadius(r = Res.Dimens.BORDER_RADIUS.px)
             .background( if (colorMode.isLight) Colors.White
                         else Colors.Gray)
-            .fillMaxWidth(Res.Dimens.MAXCARDWIDTH2.px)
-            .height(Res.Dimens.MAXCARDHEIGHT2.px),
+            .fillMaxWidth(if (breakpoint2 <= Breakpoint.MD) 100.percent
+                        else Res.Dimens.MAXCARDWIDTH2.px)
+
+            .height(if (breakpoint2 <= Breakpoint.SM) 100.percent
+            else Res.Dimens.MAXCARDHEIGHT2.px),
 
 
     ){

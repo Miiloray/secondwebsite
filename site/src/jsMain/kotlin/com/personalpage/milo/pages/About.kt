@@ -44,10 +44,10 @@ fun Aboutpage() {
             .backgroundImage(
                 linearGradient(
                     dir = LinearGradient.Direction.ToRight,
-                    from =  if (colormodeabout.isLight) Res.Themecolor.RICHBLACK.color
+                    from =  if (colormodeabout.isLight) Res.Themecolor.TRUEBLUE.color
                             else Res.Themecolor.NONPHOTBLUE.color,
                     to =  if (colormodeabout.isLight) Res.Themecolor.NONPHOTBLUE.color
-                        else Res.Themecolor.TRUEBLUE.color
+                        else Res.Themecolor.RICHBLACK.color
                 )
             ),
         contentAlignment = Alignment.Center

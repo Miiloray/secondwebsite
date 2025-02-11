@@ -33,17 +33,19 @@ object Res {
     object CONTENT {
         const val FOTO = "portrait.png"
         const val CORAL = "coral.png"
+        const val SHARK = "shark.png"
+        const val SHARKCORAL = "sharkcoral.png"
         const val CORALREEF = "coralreef.png"
         const val FUNFACT = "Shark fun facts:     "
         const val ABOUT =
-                            "Blue sharks are really blue" +
+                            "Blue sharks are really blue. " +
                             " It displays a brilliant blue color on the upper portion of its body " +
                 "and is normally snowy white beneath. The mako and porbeagle sharks" +
                 " also exhibit a blue coloration, but it is not nearly as brilliant" +
                 " as that of a blue shark. In life, most sharks are brown, olive, or grayish."
         const val NEWTEXT = "Press 'Homepage' to return to the Homepage  "
         const val NAME = "Tigershark"
-        const val OCCUPATION = "shark"
+        const val OCCUPATION = "Shark"
         const val EMAIL = "email"
         const val PANCAKE = "Pancake"
         const val LAZYTYPE = "Lazytype"

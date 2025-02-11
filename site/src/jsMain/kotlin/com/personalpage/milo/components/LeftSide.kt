@@ -35,7 +35,7 @@ fun LeftSide(
         SpanText(
             text = Res.CONTENT.NAME,
             modifier = Modifier
-                .margin(top = 12.px)
+                .margin(top = 24.px)
                 .fontFamily(Res.CONTENT.LAZYTYPE)
                 .color(if(colorMode.isLight)Res.Themecolor.NONPHOTBLUE.color
                         else Res.Themecolor.TRUEBLUE.color)
@@ -50,11 +50,11 @@ fun LeftSide(
         SpanText(
             text = Res.CONTENT.OCCUPATION,
             modifier = Modifier
-                .margin(bottom = 24.px)
+                .margin(bottom = 12.px)
                 .fontFamily(Res.CONTENT.PANCAKE)
                 .color(if(colorMode.isLight)Res.Themecolor.NONPHOTBLUE.color
                 else Res.Themecolor.TRUEBLUE.color)
-                .fontSize(18.px)
+                .fontSize(24.px)
         )
         Surface(
             modifier = Modifier //the small line under profession
@@ -71,7 +71,8 @@ fun LeftSide(
         SpanText(
             text = Res.CONTENT.FUNFACT,
             modifier = Modifier
-                .margin(top = 12.px)
+                .margin(top = 16.px)
+                .fontWeight(FontWeight.Bold)
                 .fontFamily(Res.CONTENT.LAZYTYPE)
                 .fontSize(22.px)
                 .color(if(colorMode.isLight)Res.Themecolor.MOONSTONEBLUE.color
@@ -84,7 +85,7 @@ fun LeftSide(
         SpanText(
             text = Res.CONTENT.ABOUT,
             modifier = Modifier
-                .margin(bottom = 12.px)
+                .margin(bottom = 14.px)
                 .fontFamily(Res.CONTENT.LAZYTYPE)
                 .fontSize(20.px)
                 .color(if(colorMode.isLight)Res.Themecolor.MOONSTONEBLUE.color

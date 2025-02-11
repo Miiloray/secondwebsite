@@ -40,10 +40,11 @@ fun HeaderAbout(colorMode: ColorMode){
         else Alignment.TopStart,
         modifier = Modifier
 
-            .fillMaxWidth(Res.Dimens.CARDHEADWIDTH.px)
+            .fillMaxWidth(if (breakpoint3 <= Breakpoint.SM) 100.percent
+                else Res.Dimens.CARDHEADWIDTH.px)
+
             .padding(all = 12.px)
             .borderRadius(r = Res.Dimens.BORDER_RADIUS.px)
-
             .background(if (colorMode.isLight) Colors.Navy
                 else Colors.Black),
 
