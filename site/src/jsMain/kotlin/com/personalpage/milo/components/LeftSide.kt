@@ -101,7 +101,7 @@ fun LeftSide(
             modifier = Buttonfade.toModifier()
                 .margin(top = 12.px),
             size = ButtonSize.LG,
-            onClick = { window.location.href = "http://localhost:8080/about"}
+            onClick = { window.location.href = "/about"}
         ){
             Image(
                 modifier = Modifier
