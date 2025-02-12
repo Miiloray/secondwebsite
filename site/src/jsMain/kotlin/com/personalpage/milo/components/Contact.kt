@@ -154,9 +154,10 @@ fun Contact(colorMode: ColorMode,breakpoint: Breakpoint) {
                         .color(if (colorMode.isLight) Colors.Black
                         else Colors.White)
                         .fillMaxSize()
-
-
-
+                        .fillMaxWidth(
+                            (if (breakpointcontact <= Breakpoint.SM) 100.percent
+                            else 500.px)
+                        )
                 ) {
                     Box(
                         modifier = Modifier
@@ -182,6 +183,7 @@ fun Contact(colorMode: ColorMode,breakpoint: Breakpoint) {
                                 (if (breakpointcontact <= Breakpoint.SM) 100.percent
                                 else 340.px)
                             )
+
 
                     ) {
                         Column() {
