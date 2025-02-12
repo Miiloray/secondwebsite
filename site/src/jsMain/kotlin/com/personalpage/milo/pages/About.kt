@@ -58,6 +58,5 @@ fun Aboutpage() {
         ProfilecardAbout(colorMode = colormodeabout)
         //Contact(colorMode = colormodeabout, breakpoint = breakpointabout)
 
-
     }
 }

@@ -2,6 +2,7 @@ package com.personalpage.milo.components
 
 import androidx.compose.runtime.Composable
 import com.personalpage.milo.util.Res
+import com.varabyte.kobweb.compose.css.CSSLengthOrPercentageNumericValue
 import com.varabyte.kobweb.compose.css.FontWeight
 import com.varabyte.kobweb.compose.css.ObjectFit
 import com.varabyte.kobweb.compose.foundation.layout.Box
@@ -155,10 +156,8 @@ fun Contact(colorMode: ColorMode,breakpoint: Breakpoint) {
                         .color(if (colorMode.isLight) Colors.Black
                         else Colors.White)
                         .fillMaxSize()
-                        .align(
-                            if (breakpointcontact <= Breakpoint.SM) Alignment.CenterHorizontally
-                            else Alignment.Start
-                        )
+
+
 
                 ) {
                     Box(
@@ -166,9 +165,6 @@ fun Contact(colorMode: ColorMode,breakpoint: Breakpoint) {
                             .margin(all = 10.px)
                             .width(175.px)
                             .height(150.px)
-
-
-
                     ){
                     Image(
                         modifier = Modifier
@@ -180,10 +176,15 @@ fun Contact(colorMode: ColorMode,breakpoint: Breakpoint) {
                     Box(
                         modifier = Modifier
                             .margin(all = 10.px)
-                            .width(340.px)
+                            //.width(340.px)
                             .height(150.px)
                             .background((if (colorMode.isLight) Colors.White
                              else Colors.Black))
+                            .fillMaxWidth(
+                                (if (breakpointcontact <= Breakpoint.SM) 100.percent
+                                else 340.px)
+                            )
+
                     ) {
                         Column() {
                             SpanText(
@@ -219,3 +220,5 @@ fun Contact(colorMode: ColorMode,breakpoint: Breakpoint) {
         }
     }
 }
+
+

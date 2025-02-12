@@ -66,6 +66,7 @@ object Res {
         const val CARDHEADWIDTH = 1175 //box in profilecard about
         const val CONTACTWIDTH = 1175   //contactpage
         const val CONTACTHEIGHT = 425 //constact page
+        const val SHARKWIDTH = 340 //sharkbox
 
     }
 }

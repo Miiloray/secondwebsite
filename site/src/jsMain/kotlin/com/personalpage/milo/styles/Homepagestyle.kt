@@ -17,7 +17,6 @@ val Homepage = CssStyle{
             .padding(12.px)
             .background(Colors.Blue)
             .transition(Transition.of("all", duration = 300.ms)) //CSSTransition
-
     }
     hover{
         Modifier
